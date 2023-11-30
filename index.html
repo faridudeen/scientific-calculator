@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <link rel="stylesheet" href=".\css\style.css"
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <input type="text" class="input-1" placeholder="0" id="outputscreen">
+
+       
+            <button onclick="display('sin')"> Sin</button>
+            <button onclick="display('cos ')" > cos</button>
+            <button onclick="display('tan ')">  tan </button>
+            <button > 𝝿</button>
+            <button > e</button>
+            
+            <button > x</button>
+            <button > x3</button>
+            <button >x²</button>
+            <button >eˣ</button>
+            <button >10x</button>
+            
+            <button > y√x</button>
+            <button > ∛x</button>
+            <button > √x</button>
+            <button  >ln</button>
+            <button  >log</button>
+            
+            
+            <button onclick="display('(')"> (</button>
+            <button onclick="display(')')"> )</button>
+            <button > 1/x</button>
+            <button >%</button>
+            <button >n!</button>
+           
+            <button onclick="display('7')">7</button>
+            <button onclick="display('8')">8</button>
+            <button onclick="display('9')">9</button>
+            <button onclick="display('+')">+</button>
+            <button onclick="del()" >Back</button>
+            
+            <button onclick="display('4')"> 4</button>
+            <button onclick="display('5')">5</button>
+            <button onclick="display('6')">6</button>
+            <button onclick="display('-')"> -</button>
+            <button > Ans</button>
+
+            <button onclick="display('1')" > 1</button>
+            <button onclick="display('2')"> 2</button>
+            <button onclick="display('3')"> 3</button>
+            <button onclick="display('*')"> *</button>
+            <button onclick="display('M+')"> M+</button>
+
+            <button onclick="display('0')"> 0</button>
+            <button onclick="display('.')"> .</button>
+            <button > EXP</button>
+            <button onclick="display('%')"> %</button>
+            <button > M-</button>
+            
+            <button > ±</button>
+            <button > RND</button>
+            <button onclick="clear()">AC</button>
+            <button onclick="calculate()" >=</button>
+            <button >MR</button>
+
+        
+
+        </div>
+    </div>
+    <script>
+        let outputscreen = document.getElementById("outputscreen")
+function display(num){
+    outputscreen.value += num;
+
+
+}
+
+
+function clear(){
+    outputscreen.value =" ";
+}
+
+
+
+
+function calculate(){
+    try{
+        outputscreen.value = eval(outputscreen.value);
+    
+    }
+    catch(error)
+    {
+        alert("invalid");
+
+    }
+}
+
+function del(){
+    outputscreen.value = outputscreen.value.slice(0,-1);
+}
+
+
+    </script>
+</body>
+</html>
